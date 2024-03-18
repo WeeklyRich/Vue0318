@@ -2,24 +2,13 @@ import ElementPlus, {ElMessage} from 'element-plus';
 
 import { createApp } from 'vue'
 
-/*
-import router from './routes/routes.js'
-import store from './store/index.js'
-
-import zhCn from 'element-plus/es/locale/lang/zh-cn'
-const app=createApp(App)
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-	app.component(key, component)
-}
-app.use(ElementPlus,{locale: zhCn}).use(router).use(store).mount('#app')
-*/
-
 
 import './style.css'
 import App from './App.vue'
 import { createRouter, createWebHashHistory} from 'vue-router'
 import VueAxios from 'vue-axios'
 import axios from 'axios'
+
 import login from './components/login.vue'
 import index from "./components/index.vue";
 
@@ -30,7 +19,7 @@ const router = createRouter({
 
         {path: '/index' , component: index , name: 'index',
             children: [
-
+                {path:'/user_list',component:user_list,name:'user_list'},
                ]},
     ]
 })
