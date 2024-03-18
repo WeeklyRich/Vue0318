@@ -137,7 +137,7 @@
 				    '确认删除编号为: ' + row.uid + ' 的用户记录吗?',
 				    'Warning',
 				    {
-				      confirmButtonText: '确定',
+				      confirmButtonText: '确定？',
 				      cancelButtonText: '取消',
 				      type: 'warning',
 				    }
